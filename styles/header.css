@@ -1,0 +1,161 @@
+.cabesalho_menu-banburg {
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/Menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+.conteiner_butao:checked ~ .conteiner_img-reverso> .cabesalho_menu-banburg{
+    background: url("../img/menu_black_24dp\ 1.svg") no-repeat;
+}
+
+.conteiner_butao:checked ~.conteiner_img-reverso{
+    background: var(--cor-degrader);
+}
+.cabesalho {
+    background-color: var(--cor-secundaria);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.conteiner {
+    display: flex;
+    align-items: center;
+}
+
+.conteiner_img {
+    padding: 1em;
+}
+
+.lista-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+}
+
+.conteiner_butao:checked~.lista-menu {
+    display: block;
+}
+
+.conteiner_butao {
+    display: none;
+}
+
+.lista-menu_titulo,
+.lista-menu_items {
+    padding: 1em;
+    background-color: var(--cor-secundaria);
+}
+
+.lista-menu_titulo {
+    color: var(--cor-laranja);
+    font-weight: 700;
+}
+
+.lista-menu_items_link {
+    background: var(--cor-degrader);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+}
+
+.container_titulo {
+    display: none;
+}
+
+.opcao {
+    display: none;
+}
+
+.container_texto {
+    display: none;
+}
+
+@media screen and (min-width: 900px) {
+
+    .container_titulo,
+    .container_titulo-negrito {
+        font-family: var(--fonte-secundario);
+        font-size: 30px;
+    }
+
+    .container_titulo {
+        font-weight: 400;
+        display: block;
+    }
+
+    .container_titulo-negrito {
+        font-weight: 700;
+
+    }
+
+    .opcao {
+        display: flex;
+    }
+
+    .opcao_itens {
+        padding: 0 1em;
+    }
+
+    .opcao_link {
+        text-decoration: none;
+        color: var(--preto);
+    }
+
+    .container_img-none {
+        display: none;
+    }
+
+    .cabesalho_menu-banburg {
+        display: none;
+    }
+
+    .opcao_butao:checked~.lista-menu {
+        display: block;
+        width: auto;
+    }
+
+    .opcao_butao {
+        display: none;
+    }
+    .opcao_butao:checked~ .opcao_reverso> .opcao_itens{
+        background: var(--cor-degrader);
+        color: var(--cor-secundaria);
+    }
+    .opcao_itens{
+        padding: 1.7em 1em;
+    }
+    .lista-menu_items:hover{
+        background: var(--cor-degrader);
+    }
+    .lista-menu_items:hover > .lista-menu_items_link{
+        -webkit-text-fill-color: var(--cor-secundaria);
+        text-decoration: none;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .container_link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--preto);
+    }
+
+    .cabesalho {
+        padding: 0 2em;
+    }
+
+    .opcao {
+        margin-right: auto;
+    }
+
+    .container_texto {
+        display: block;
+    }
+}
